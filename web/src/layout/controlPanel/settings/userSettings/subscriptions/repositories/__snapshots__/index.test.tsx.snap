@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepositoriesSection creates snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="mt-5 pt-3"
+  >
+    <div
+      class="position-absolute p-5 wrapper undefined"
+    >
+      <div
+        class="d-flex flex-row align-items-center justify-content-center w-100 h-100"
+      >
+        <div
+          class="spinner-border text-primary spinner undefined"
+          role="status"
+        >
+          <span
+            class="sr-only"
+          >
+            Loading...
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="d-flex flex-row align-items-start justify-content-between pb-2"
+    >
+      <div
+        class="h4 pb-0 title"
+      >
+        Repositories
+      </div>
+      <div>
+        <button
+          class="btn btn-secondary btn-sm text-uppercase btnAction"
+          data-testid="addOptOut"
+        >
+          <div
+            class="d-flex flex-row align-items-center justify-content-center"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M192 277.4h189.7l-43.6 44.7L368 352l96-96-96-96-31 29.9 44.7 44.7H192v42.8z"
+              />
+              <path
+                d="M255.7 421.3c-44.1 0-85.5-17.2-116.7-48.4-31.2-31.2-48.3-72.7-48.3-116.9 0-44.1 17.2-85.7 48.3-116.9 31.2-31.2 72.6-48.4 116.7-48.4 44 0 85.3 17.1 116.5 48.2l30.3-30.3c-8.5-8.4-17.8-16.2-27.7-23.2C339.7 61 298.6 48 255.7 48 141.2 48 48 141.3 48 256s93.2 208 207.7 208c42.9 0 84-13 119-37.5 10-7 19.2-14.7 27.7-23.2l-30.2-30.2c-31.1 31.1-72.5 48.2-116.5 48.2zM448.004 256.847l-.849-.848.849-.849.848.849z"
+              />
+            </svg>
+            <span
+              class="d-none d-md-inline ml-2"
+            >
+              Opt-out
+            </span>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="mt-3 mt-md-3"
+    >
+      <p>
+        Repositories notifications are 
+        <span
+          class="font-weight-bold"
+        >
+          enabled by default
+        </span>
+        . However, you can opt-out of notifications for certain kinds of events that happen in any of the repositories you can manage.
+      </p>
+      <p>
+        You will 
+        <span
+          class="font-weight-bold"
+        >
+          NOT
+        </span>
+         receive notifications when an event that matches any of the repositories in the list is fired.
+      </p>
+      <div
+        class="mt-4 mt-md-5"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

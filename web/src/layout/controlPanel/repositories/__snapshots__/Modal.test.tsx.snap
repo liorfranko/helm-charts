@@ -1,0 +1,362 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Repository Modal - repositories section creates snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="modal-backdrop activeBackdrop"
+      data-testid="modalBackdrop"
+    />
+    <div
+      class="modal modal active d-block"
+      role="dialog"
+    >
+      <div
+        class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div
+          class="modal-content content modal"
+        >
+          <div
+            class="modal-header d-flex flex-row align-items-center header undefined"
+          >
+            <div
+              class="h3 m-2 flex-grow-1 title"
+            >
+              Add repository
+            </div>
+            <button
+              class="close"
+              data-testid="closeModalBtn"
+              type="button"
+            >
+              <span
+                aria-hidden="true"
+              >
+                ×
+              </span>
+            </button>
+          </div>
+          <div
+            class="modal-body p-4 h-100 d-flex flex-column"
+          >
+            <div
+              class="w-100"
+            >
+              <form
+                autocomplete="on"
+                class="w-100 needs-validation"
+                data-testid="repoForm"
+                novalidate=""
+              >
+                <div
+                  class="form-group w-75 mb-4"
+                >
+                  <label
+                    class="font-weight-bold label"
+                    for="repoKind"
+                  >
+                    Kind
+                  </label>
+                  <select
+                    aria-label="kind-select"
+                    class="custom-select"
+                    name="repoKind"
+                    required=""
+                  >
+                    <option
+                      value="0"
+                    >
+                      Helm charts
+                    </option>
+                    <option
+                      value="6"
+                    >
+                      Helm plugins
+                    </option>
+                    <option
+                      value="1"
+                    >
+                      Falco rules
+                    </option>
+                    <option
+                      value="2"
+                    >
+                      OPA policies
+                    </option>
+                    <option
+                      value="3"
+                    >
+                      OLM operators
+                    </option>
+                    <option
+                      value="4"
+                    >
+                      Tinkerbell actions
+                    </option>
+                    <option
+                      value="5"
+                    >
+                      Krew kubectl plugins
+                    </option>
+                    <option
+                      value="7"
+                    >
+                      Tekton tasks
+                    </option>
+                    <option
+                      value="8"
+                    >
+                      KEDA scalers
+                    </option>
+                    <option
+                      value="9"
+                    >
+                      CoreDNS plugins
+                    </option>
+                  </select>
+                </div>
+                <div
+                  class="form-group mb-4 position-relative undefined"
+                >
+                  <label
+                    class="font-weight-bold label"
+                    for="name"
+                  >
+                    <span
+                      class="font-weight-bold"
+                    >
+                      Name
+                    </span>
+                    <small
+                      class="ml-1 font-italic"
+                    >
+                      (Required)
+                    </small>
+                  </label>
+                  <input
+                    autocomplete="off"
+                    class="form-control"
+                    data-testid="nameInput"
+                    name="name"
+                    pattern="[a-z][a-z0-9-]*"
+                    required=""
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="invalid-feedback mt-0 inputFeedback"
+                  >
+                    This field is required
+                  </div>
+                  <div
+                    class="alert p-0 mt-4"
+                  >
+                    <small
+                      class="text-muted text-break mt-1"
+                    >
+                      <p
+                        class="mb-0"
+                      >
+                        This name will appear in your packages' urls and 
+                        <span
+                          class="font-weight-bold"
+                        >
+                          cannot be updated
+                        </span>
+                         once is saved.
+                      </p>
+                    </small>
+                  </div>
+                </div>
+                <div
+                  class="form-group mb-4 position-relative undefined"
+                >
+                  <label
+                    class="font-weight-bold label"
+                    for="displayName"
+                  >
+                    <span
+                      class="font-weight-bold"
+                    >
+                      Display name
+                    </span>
+                  </label>
+                  <input
+                    class="form-control"
+                    data-testid="displayNameInput"
+                    name="displayName"
+                    spellcheck="false"
+                    type="text"
+                    value=""
+                  />
+                  <div
+                    class="invalid-feedback mt-0 inputFeedback"
+                  />
+                </div>
+                <div
+                  class="form-group mb-4 position-relative undefined"
+                >
+                  <label
+                    class="font-weight-bold label"
+                    for="url"
+                  >
+                    <span
+                      class="font-weight-bold"
+                    >
+                      Url
+                    </span>
+                    <small
+                      class="ml-1 font-italic"
+                    >
+                      (Required)
+                    </small>
+                  </label>
+                  <input
+                    class="form-control"
+                    data-testid="urlInput"
+                    name="url"
+                    required=""
+                    spellcheck="false"
+                    type="url"
+                    value=""
+                  />
+                  <div
+                    class="invalid-feedback mt-0 inputFeedback"
+                  >
+                    This field is required
+                  </div>
+                </div>
+                <div
+                  class="text-muted text-break mt-1 mb-4"
+                >
+                  <small>
+                    <p
+                      class="mb-0"
+                    >
+                      For more information about the url format and the repository structure, please see the 
+                      <a
+                        class="link text-reset"
+                        href="/docs/topics/repositories#helm-charts-repositories"
+                        rel="noopener noreferrer"
+                        role="button"
+                        target="_blank"
+                      >
+                        <u>
+                          Helm charts repositories
+                        </u>
+                      </a>
+                       section in the 
+                      <a
+                        class="link text-reset"
+                        href="/docs/repositories"
+                        rel="noopener noreferrer"
+                        role="button"
+                        target="_blank"
+                      >
+                        <u>
+                          repositories guide
+                        </u>
+                      </a>
+                      .
+                    </p>
+                  </small>
+                </div>
+                <div
+                  class="mb-4"
+                >
+                  <div
+                    class="custom-control custom-switch pl-0"
+                  >
+                    <input
+                      class="custom-control-input"
+                      data-testid="toggleDisabledRepo"
+                      id="disabledRepo"
+                      type="checkbox"
+                      value="true"
+                    />
+                    <label
+                      class="custom-control-label font-weight-bold label customControlRightLabel"
+                      for="disabledRepo"
+                    >
+                      Disabled
+                    </label>
+                  </div>
+                  <small
+                    class="form-text text-muted mt-2"
+                  >
+                    Use this switch to disable the repository temporarily or permanently.
+                  </small>
+                </div>
+                <div
+                  class="mt-4 mb-3"
+                >
+                  <div
+                    class="custom-control custom-switch pl-0"
+                  >
+                    <input
+                      class="custom-control-input"
+                      id="scannerDisabledRepo"
+                      type="checkbox"
+                      value="true"
+                    />
+                    <label
+                      class="custom-control-label font-weight-bold label customControlRightLabel"
+                      for="scannerDisabledRepo"
+                    >
+                      Security scanner disabled
+                    </label>
+                  </div>
+                  <small
+                    class="form-text text-muted mt-2"
+                  >
+                    Use this switch to disable the security scanning of the packages in this repository.
+                  </small>
+                </div>
+              </form>
+            </div>
+            <div>
+              <div
+                class="alertWrapper"
+                data-testid="alertWrapper"
+              />
+            </div>
+          </div>
+          <div
+            class="modal-footer p-3"
+          >
+            <button
+              class="btn btn-sm btn-secondary"
+              data-testid="repoBtn"
+              type="button"
+            >
+              <div
+                class="d-flex flex-row align-items-center text-uppercase"
+              >
+                <svg
+                  class="mr-2"
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 24 24"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"
+                  />
+                </svg>
+                <div>
+                  Add
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

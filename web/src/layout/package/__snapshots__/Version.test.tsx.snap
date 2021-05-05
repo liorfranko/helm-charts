@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Version creates snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="py-1 py-sm-0 w-100 text-truncate"
+  >
+    <div
+      class="d-flex flex-row align-items-baseline"
+    >
+      <button
+        class="btn btn-link pl-0 pt-0 pb-0 border-0 text-truncate d-block mw-100 text-left"
+        data-testid="version"
+      >
+        1.0.1
+      </button>
+      <small
+        class="text-muted"
+      >
+        (1 Jan, 1970)
+      </small>
+    </div>
+  </div>
+</DocumentFragment>
+`;

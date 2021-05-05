@@ -1,0 +1,182 @@
+@import './fonts.css';
+
+$font-family-sans-serif: 'Lato', Roboto, 'Helvetica Neue', Arial, sans-serif !default;
+$font-family-monospace: 'Roboto Mono', 'Liberation Mono', 'Courier New', monospace !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1920px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 930px,
+  xl: 1080px,
+  xxl: 1860px,
+);
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import './light.scss';
+@import './dark.scss';
+
+.form-control:disabled,
+.form-control[readonly] {
+  opacity: 0.75;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1.5rem;
+}
+
+.was-validated .form-control:valid {
+  background-image: none !important;
+  padding-right: 0.75rem !important;
+}
+
+.was-validated .custom-control-input:valid ~ .custom-control-label::before {
+  border-color: inherit;
+}
+
+.was-validated .custom-control-input:valid ~ .custom-control-label {
+  color: inherit;
+}
+
+.was-validated .form-control:valid {
+  border-color: #ced4da !important;
+}
+
+.was-validated .custom-control-input:valid ~ .custom-control-label::before,
+.custom-control-input.is-valid ~ .custom-control-label::before,
+.was-validated .custom-select:valid,
+.custom-select.is-valid,
+.was-validated .custom-select:valid:focus,
+.custom-select.is-valid:focus {
+  border-color: #adb5bd;
+}
+
+.dropdown-menu > .arrow {
+  position: absolute;
+  display: block;
+  width: 1rem;
+  height: 0.5rem;
+  margin: 0 0.3rem;
+  top: calc(-0.5rem - 1px);
+  right: 1rem;
+
+  &.arrow-iconBtn {
+    right: 0.18rem;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    border-color: transparent;
+    border-style: solid;
+  }
+
+  &::before {
+    top: 0;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
+    border-bottom-color: rgba(0, 0, 0, 0.25);
+  }
+
+  &::after {
+    top: 1px;
+    border-width: 0 0.5rem 0.5rem 0.5rem;
+    border-bottom-color: #fff;
+  }
+}
+
+label,
+a,
+button {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media only screen and (max-width: 575.98px) {
+  h1,
+  .h1 {
+    font-size: 1.5rem;
+  }
+
+  h2,
+  .h2 {
+    font-size: 1.4rem;
+  }
+
+  h3,
+  .h3 {
+    font-size: 1.35rem;
+  }
+
+  h4,
+  .h4 {
+    font-size: 1.25rem;
+  }
+
+  h5,
+  .h5 {
+    font-size: 1.05rem;
+  }
+
+  .header h6 {
+    font-size: 1rem;
+  }
+}
+
+//  Codemirror
+.CodeMirror-scroll {
+  min-height: 200px;
+}
+
+@media (min-width: 1920px) {
+  .modal-lg {
+    max-width: 1000px;
+  }
+
+  .modal-xl {
+    max-width: 1400px;
+  }
+}
+
+// Indentation for values schema
+@for $i from 0 through 30 {
+  .level#{$i} {
+    margin-left: $i * 20px;
+  }
+}
+
+// CSP - image inline - update embed svg from bootstrap
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  background-image: url('/static/media/bootstrap/bt_input_error.svg');
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label:after {
+  background-image: url('/static/media/bootstrap/bt_check.svg');
+}
+
+.custom-radio .custom-control-input:checked ~ .custom-control-label:after {
+  background-image: url('/static/media/bootstrap/bt_dot.svg');
+}
+
+.was-validated .custom-select:valid,
+.custom-select.is-valid,
+.was-validated .custom-select:valid:focus,
+.custom-select.is-valid:focus {
+  background: url('/static/media/bootstrap/bt_input_success.svg') no-repeat right 0.75rem center/8px 10px;
+}
+
+.custom-select {
+  background: #fff url('/static/media/bootstrap/bt_select.svg') right 0.75rem center/8px 10px no-repeat;
+}

@@ -1,0 +1,249 @@
+.mainContent {
+  margin-top: 35px;
+}
+
+.jumbotron {
+  background-color: var(--color-1-10) !important;
+  padding: 2rem 1rem !important;
+  border-radius: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.imageWrapper {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 2px solid var(--color-1-20);
+  box-shadow: 0px 0px 5px 0px var(--color-1-20);
+}
+
+.image {
+  max-width: calc(100% - 8px);
+  max-height: calc(100% - 8px);
+}
+
+.info {
+  background-color: var(--color-1-2) !important;
+  margin-top: 25px;
+  width: 230px;
+}
+
+.subtitle {
+  line-height: 20px;
+}
+
+.mobileSubtitle {
+  font-size: 90%;
+  line-height: 1rem;
+}
+
+.repoLabel {
+  top: -2px;
+}
+
+.description {
+  overflow-wrap: break-word;
+}
+
+.rightColumnWrapper code,
+.codeWrapper code {
+  word-wrap: normal !important;
+  white-space: pre !important;
+}
+
+.link {
+  color: var(--color-font) !important;
+}
+
+.link:hover {
+  color: inherit;
+}
+
+.deprecatedBadge {
+  border: 1px solid var(--danger);
+  color: var(--danger);
+  font-size: 0.5rem !important;
+}
+
+.extraSpace::before {
+  content: ' ';
+  display: inline-flex;
+}
+
+.wrapperWithContentEllipsis {
+  min-width: 0;
+}
+
+.titleWrapper {
+  margin-right: 230px;
+}
+
+.optsWrapper {
+  top: 0;
+  right: 0;
+  padding-right: 1.5rem;
+}
+
+.mobileIcon {
+  width: 18px;
+}
+
+.repoIcon {
+  height: 16px;
+  width: auto;
+  margin-top: -6px;
+}
+
+.tinyIcon {
+  font-size: 0.75rem;
+}
+
+.tinyIcon svg {
+  vertical-align: baseline;
+}
+
+.mw50 {
+  max-width: 50%;
+}
+
+.date {
+  font-size: 70%;
+}
+
+.detailsBody {
+  padding: 0.5rem 1.25rem;
+}
+
+.btnMobileWrapper {
+  max-width: 50%;
+}
+
+.noDataWrapper {
+  margin-top: 6rem !important;
+}
+
+.noDataTitleContent {
+  line-height: 1.75rem;
+}
+
+.noDataContent {
+  line-height: 1.5rem;
+}
+
+.additionalInfo {
+  z-index: 10;
+}
+
+.noReadmeWrapper {
+  margin-right: 250px;
+}
+
+.spinner {
+  top: 50%;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .imageWrapper {
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .image {
+    max-width: calc(100% - 4px);
+    max-height: calc(100% - 4px);
+  }
+
+  .readme {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .titleWrapper {
+    margin-right: 0px;
+  }
+
+  .optsWrapper {
+    margin-top: 1.5rem;
+    position: relative !important;
+    padding-right: 0;
+  }
+
+  .deprecatedBadge {
+    font-size: 0.6rem !important;
+  }
+
+  .optsWrapper {
+    justify-content: space-between;
+  }
+
+  .noDataWrapper {
+    margin-top: 3rem !important;
+  }
+
+  .noReadmeWrapper {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .rightColumnWrapper {
+    margin-top: 10px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .optsWrapper {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .mainContent {
+    margin-top: 0;
+  }
+
+  .jumbotron {
+    padding: 2rem 0 !important;
+  }
+
+  .title {
+    font-size: 1.15rem !important;
+  }
+
+  .codeWrapper {
+    margin-left: 15px;
+  }
+
+  .repoIcon {
+    height: 14px;
+    margin-top: -3px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .mainContent {
+    flex: 0 0 calc(100% - 380px);
+    max-width: calc(100% - 380px);
+  }
+
+  .relatedPackagesWrapper {
+    max-width: 310px;
+  }
+
+  .info {
+    width: 310px;
+  }
+
+  .noReadmeWrapper {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 767.98px) and (max-width: 1920px) {
+  .relatedPackagesWrapper {
+    max-width: 230px;
+  }
+}

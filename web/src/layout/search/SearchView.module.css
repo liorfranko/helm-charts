@@ -1,0 +1,65 @@
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+}
+
+.btnMobileFilters {
+  transition: all 0.3s ease-in-out;
+  background-color: var(--color-black-5) !important;
+  height: 32px;
+  width: 32px;
+}
+
+.filtersBadge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #dc3545;
+  border: 2px solid var(--color-black-5);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.resetBtnDecorator {
+  font-size: 0.8rem;
+  height: 1.5em;
+}
+
+.list {
+  max-width: 100%;
+}
+
+.noDataMessage {
+  line-height: 1.5rem;
+}
+
+.spinner {
+  top: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .list {
+    flex-basis: calc(100% - 250px);
+    max-width: calc(100% - 250px);
+  }
+
+  .emptyList {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (hover: hover) {
+  .btnMobileFilters:hover {
+    background-color: var(--color-black-15) !important;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .sidebar {
+    width: 320px;
+    min-width: 320px;
+  }
+}

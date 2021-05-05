@@ -1,0 +1,24 @@
+.table {
+  font-size: 0.9rem;
+}
+
+.imageNameWrapper {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.tableTitle th {
+  width: 100px;
+  border-bottom-color: var(--color-1-300) !important;
+}
+
+.tableTitle th.image {
+  width: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  .table {
+    font-size: 1rem;
+  }
+}

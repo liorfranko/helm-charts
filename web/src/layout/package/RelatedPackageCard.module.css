@@ -1,0 +1,107 @@
+.card {
+  background-color: var(--white) !important;
+  box-shadow: 0px 0px 5px 0px var(--light);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    border-color: var(--color-1-700);
+    box-shadow: 0px 0px 5px 0px var(--color-1-900);
+  }
+}
+
+.body {
+  padding: 0.75rem 0.5em !important;
+}
+
+.imageWrapper {
+  min-width: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--white);
+  border: 2px solid var(--color-1-10);
+  box-shadow: 0px 0px 5px 0px var(--color-1-20);
+}
+
+.image {
+  max-width: calc(100% - 1px);
+  max-height: calc(100% - 1px);
+}
+
+.icon {
+  height: auto;
+  width: 14px;
+  max-height: 14px;
+}
+
+.link {
+  color: var(--gray-dark);
+  background-color: transparent;
+}
+
+.link:hover {
+  color: inherit;
+}
+
+.mx50 {
+  max-width: 50%;
+  text-align: left;
+  width: auto;
+}
+
+.title {
+  line-height: 1rem;
+  font-size: 0.8rem;
+}
+
+.subtitle {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  margin-top: -0.275rem;
+}
+
+.subtitle span {
+  font-size: 0.65rem;
+}
+
+.kind {
+  font-size: 0.8rem;
+}
+
+.legend {
+  margin-bottom: 0.15rem;
+}
+
+.truncateWrapper {
+  min-width: 0;
+}
+
+.starBadge {
+  background-color: var(--color-1-5);
+  border: 1px solid var(--color-1-10);
+}
+
+.badge {
+  height: 17px;
+}
+
+.badgeIcon {
+  height: 10px;
+  width: 10px;
+  top: -3px;
+}
+
+@media (min-width: 1920px) {
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .subtitle span {
+    font-size: 0.65rem;
+  }
+}

@@ -1,0 +1,55 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ include "chart.resourceNamePrefix" . }}scanner
+spec:
+  schedule: "15,45 * * * *"
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+        {{- with .Values.imagePullSecrets }}
+          imagePullSecrets:
+            {{- toYaml . | nindent 8 }}
+        {{- end }}
+          restartPolicy: Never
+          initContainers:
+          - name: check-db-ready
+            image: {{ .Values.postgresql.image.repository }}:{{ .Values.postgresql.image.tag }}
+            imagePullPolicy: {{ .Values.pullPolicy }}
+            resources:
+              {{- toYaml .Values.scanner.cronjob.resources | nindent 14 }}
+            env:
+              - name: PGHOST
+                value: {{ default (printf "%s-postgresql.%s" .Release.Name .Release.Namespace) .Values.db.host }}
+              - name: PGPORT
+                value: "{{ .Values.db.port }}"
+            command: ['sh', '-c', 'until pg_isready; do echo waiting for database; sleep 2; done;']
+          containers:
+          - name: scanner
+            image: {{ .Values.scanner.cronjob.image.repository }}:{{ .Values.imageTag | default (printf "v%s" .Chart.AppVersion) }}
+            imagePullPolicy: {{ .Values.pullPolicy }}
+            {{- if .Values.scanner.cacheDir }}
+            env:
+              - name: TRIVY_CACHE_DIR
+                value: {{ .Values.scanner.cacheDir | quote }}
+            {{- end }}
+            volumeMounts:
+            - name: scanner-config
+              mountPath: {{ .Values.scanner.configDir | quote }}
+              readOnly: true
+            {{- if .Values.scanner.cacheDir }}
+            - name: cache-dir
+              mountPath: {{ .Values.scanner.cacheDir | quote }}
+            {{- end }}
+          volumes:
+          - name: scanner-config
+            secret:
+              secretName: {{ include "chart.resourceNamePrefix" . }}scanner-config
+          {{- if .Values.scanner.cacheDir }}
+          - name: cache-dir
+            emptyDir: {}
+          {{- end }}

@@ -1,0 +1,64 @@
+.contentWrapper {
+  min-width: 0;
+}
+
+.btn {
+  font-size: inherit;
+}
+
+.btnClip {
+  font-size: 80%;
+}
+
+.dropdownMenu {
+  top: 25px;
+  left: -10px;
+  min-width: calc(100% + 20px);
+}
+
+.content {
+  margin-top: 1px;
+  min-width: 0px;
+}
+
+.arrow {
+  left: 5px;
+}
+
+.badge {
+  top: -2px;
+}
+
+.xsBadge {
+  font-size: 0.5rem;
+}
+
+.wordBreak {
+  word-break: break-word;
+}
+
+.icon {
+  width: 20px;
+}
+
+.moreInfo {
+  margin-left: 20px;
+}
+
+.listItem {
+  padding-left: 15px;
+}
+
+.listItem::before {
+  content: '- ';
+  position: absolute;
+  left: 0px;
+}
+
+.errorMsg {
+  line-height: 1.15rem;
+}
+
+.descriptionLink {
+  word-break: break-all;
+}

@@ -1,9 +1,0 @@
-.alert {
-  top: 20px;
-  right: 20px;
-  max-width: 350px;
-}
-
-.active {
-  z-index: 1160;
-}

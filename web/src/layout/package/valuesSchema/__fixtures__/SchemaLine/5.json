@@ -1,7 +1,0 @@
-{
-  "value": { "type": "integer", "title": "SMTP port", "default": 587 },
-  "name": "port",
-  "level": 3,
-  "isRequired": false,
-  "path": "hub.email.smtp"
-}

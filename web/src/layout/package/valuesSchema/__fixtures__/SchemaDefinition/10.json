@@ -1,8 +1,0 @@
-{
-  "def": {
-    "active": 0,
-    "combinationtype": null,
-    "options": [{ "type": ["string", "null"], "description": "Agent group's jitterbit.conf file" }]
-  },
-  "defaultValue": "null"
-}

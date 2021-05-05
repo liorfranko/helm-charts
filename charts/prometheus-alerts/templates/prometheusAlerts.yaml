@@ -1,0 +1,38 @@
+{{- if .Values.PrometheusAlerts }}
+apiVersion: v1
+kind: List
+items:
+{{- range $prometheusRuleName, $prometheusRules := .Values.PrometheusAlerts }}
+  - apiVersion: monitoring.coreos.com/v1
+    kind: PrometheusRule
+    metadata:
+      name: {{ template "prometheus-alerts.fullname" $ }}-{{ $prometheusRuleName }}
+      labels:
+        role: alert-rules
+    spec:
+      groups:
+      - name: {{ $prometheusRuleName }}
+        rules:
+{{- range $prometheusSubRuleName, $prometheusSubRule := $prometheusRules }}
+        - alert: {{ $prometheusSubRuleName }}
+          expr: {{ $prometheusSubRule.expr | quote }}
+
+          {{- if $prometheusSubRule.annotations }}
+          annotations:
+          {{- range $key, $value := $prometheusSubRule.annotations }}
+            {{ $key }}: {{ $value | quote }}
+          {{- end }}          
+          {{- end }}
+          {{- if $prometheusSubRule.labels }}
+          labels:
+          {{- range $key, $value := $prometheusSubRule.labels }}
+            {{ $key }}: {{ $value | quote }}
+          {{- end }}           
+          {{- end }}
+          
+          {{- if $prometheusSubRule.for }}
+          for: {{ $prometheusSubRule.for }}
+          {{- end }}
+{{- end }}
+{{- end }}
+{{- end }}

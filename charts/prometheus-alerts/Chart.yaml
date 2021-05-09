@@ -1,0 +1,6 @@
+apiVersion: v2
+name: prometheus-alerts
+description: A Helm chart for deploying prometheus alerts with the ability to override specific fields on each alert.
+type: application
+version: 0.1.1
+appVersion: 0.1.0

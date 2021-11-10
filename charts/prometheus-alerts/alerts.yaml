@@ -947,7 +947,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioMixerTelemetryAvailabilityDrop:
       annotations:
         summary: 'Istio Mixer Telemetry Drop'
@@ -957,7 +957,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioGalleyAvailabilityDrop:
       annotations:
         summary: 'Istio Galley Availability Drop'
@@ -967,7 +967,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioApp01GatewayAvailabilityDrop:
       annotations:
         summary: 'Istio Gateway Availability Drop'
@@ -977,7 +977,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioInfraGatewayAvailabilityDrop:
       annotations:
         summary: 'Istio Gateway Availability Drop'
@@ -987,7 +987,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioPilotPushErrorsHigh:
       annotations:
         summary: 'Number of Istio Pilot push errors is too high'
@@ -997,7 +997,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioMixerPrometheusDispatchesLow:
       annotations:
         summary: 'Number of Mixer dispatches to Prometheus is too low'
@@ -1007,7 +1007,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioGlobalRequestRateHigh:
       annotations:
         summary: 'Istio Global Request Rate High'
@@ -1017,7 +1017,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioGlobalRequestRateLow:
       annotations:
         summary: 'Istio global request rate too low'
@@ -1027,7 +1027,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioGlobalHTTP5xxRateHigh:
       annotations:
         summary: 'Istio Percentage of HTTP 5xx responses is too high'
@@ -1037,7 +1037,7 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
+        controlPlane: true
     IstioGatewayOutgoingSuccessLow:
       annotations:
         summary: 'Istio Gateway outgoing success rate is too low'
@@ -1047,8 +1047,8 @@ PrometheusAlerts:
       for: 5m
       labels:
         severity: warning
-        controlPlane: true      
-  prometheuse-alerts:
+        controlPlane: true
+  prometheus-alerts:
     # PrometheusTargetMissing:
     #   expr: up == 0
     #   for: 0m
@@ -2016,7 +2016,7 @@ PrometheusAlerts:
         controlplane: true
       annotations:
         description: Pods can't be scheduled for 30 minutes {{ $value }}
-        summary: Unscheduled pods for 30 minutes       
+        summary: Unscheduled pods for 30 minutes
   core-dns-alerts:
     K8SCoreDNSErrorRateZScore:
       expr: 'coredns:error_rate_zscore_abs > 5'

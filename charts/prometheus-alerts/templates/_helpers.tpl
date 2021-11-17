@@ -49,14 +49,3 @@ Selector labels
 app.kubernetes.io/name: {{ include "prometheus-alerts.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
-
-{{/*
-Create the name of the service account to use
-*/}}
-{{- define "prometheus-alerts.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create }}
-{{- default (include "prometheus-alerts.fullname" .) .Values.serviceAccount.name }}
-{{- else }}
-{{- default "default" .Values.serviceAccount.name }}
-{{- end }}
-{{- end }}

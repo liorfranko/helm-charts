@@ -2796,7 +2796,7 @@ PrometheusAlerts:
       labels:
         severity: critical
         controlplane: true
-    KubeAPIErrorBudgetBurn:
+    KubeAPIErrorBudgetBurn15m:
       annotations:
         description: The API server is burning too much error budget.
         summary: The API server is burning too much error budget.
@@ -2808,7 +2808,7 @@ PrometheusAlerts:
       labels:
         severity: critical
         controlplane: true
-    KubeAPIErrorBudgetBurn:
+    KubeAPIErrorBudgetBurn1h:
       annotations:
         description: The API server is burning too much error budget.
         summary: The API server is burning too much error budget.
@@ -2820,7 +2820,7 @@ PrometheusAlerts:
       labels:
         severity: warning
         controlplane: true
-    KubeAPIErrorBudgetBurn:
+    KubeAPIErrorBudgetBurn3h:
       annotations:
         description: The API server is burning too much error budget.
         summary: The API server is burning too much error budget.
